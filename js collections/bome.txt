@@ -1,0 +1,74 @@
+let fruits = ['Apple', 'Banana', 'Orange'];
+
+
+=================================
+
+
+let person = {
+    name: 'John',
+    age: 30,
+    city: 'New York'
+};
+
+
+---------------------------------------------------------------
+
+
+
+let map = new Map();
+map.set('name', 'John');
+map.set(1, 'One');
+
+
+
+-----------------==================
+
+
+
+let set = new Set([1, 2, 3, 4, 4, 5]);
+
+
+
+
+
+
+
+
+
+===================
+
+
+
+const fs = require('fs');
+
+// Reading a file
+fs.readFile('file.txt', 'utf8', (err, data) => {
+    if (err) throw err;
+    console.log(data);
+});
+
+// Writing to a file
+fs.writeFile('file.txt', 'Hello, World!', (err) => {
+    if (err) throw err;
+    console.log('File written!');
+});
+
+
+
+==============
+
+
+
+
+// Reading a file
+const fileInput = document.getElementById('fileInput');
+fileInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (e) => {
+        console.log(e.target.result); // File content
+    };
+    reader.readAsText(file);
+});
+
+// Writing to a file (not directly supported in browsers due to security reasons)
